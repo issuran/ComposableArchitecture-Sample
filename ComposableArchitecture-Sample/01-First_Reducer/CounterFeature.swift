@@ -30,5 +30,7 @@ struct CounterFeature: Reducer {
             return .none
         }
     }
-
 }
+
+// MARK: View stores require that State be Equatable
+extension CounterFeature.State: Equatable {}
