@@ -14,17 +14,26 @@ struct ComposableArchitecture_SampleApp: App {
     
     // 01 - Tutorial - First Reducer
     // TIP: `_printChanges` it will print every action that the reducer processes to the console, and it will print how the state changed after processing the action.
-    static let store = Store(initialState: CounterFeature.State()) {
-        CounterFeature()
+//    static let store = Store(initialState: CounterFeature.State()) {
+//        CounterFeature()
+//            ._printChanges()
+//    }
+//    
+//    var body: some Scene {
+//        WindowGroup {
+//            CounterFeatureView(store: ComposableArchitecture_SampleApp.store)
+//        }
+//    }
+    
+    // 02 - Tutorial - Side Effect
+    static let store = Store(initialState: CounterFeatureSideEffect.State()) {
+        CounterFeatureSideEffect()
             ._printChanges()
     }
     
     var body: some Scene {
         WindowGroup {
-            CounterFeatureView(store: ComposableArchitecture_SampleApp.store)
+            CounterFeatureSideEffectView(store: ComposableArchitecture_SampleApp.store)
         }
     }
-    
-    // 02 - Tutorial - Side Effect
-    
 }
