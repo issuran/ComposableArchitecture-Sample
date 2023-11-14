@@ -25,8 +25,13 @@ struct CounterFeatureSideEffect: Reducer {
         case factButtonTapped
         case incrementButtonTapped
         case factResponse(String)
+        // MARK: In order to react to each timer tick in the reducer we need to introduce a new action, timerTick, that will be sent after each Task.sleep. And it’s in that action we will increment the state’s count.
+        case timerTick
         case toggleTimerButtonTapped
     }
+    
+    // MARK: “effect cancellation”. We can mark any effect as cancellable using the cancellable(id:cancelInFlight:) method by providing an ID, and then at a later time we can cancel that effect using cancel(id:)
+    enum CancelID { case timer }
     
     var body: some ReducerOf<Self> {
         Reduce<State, Action> { state, action in
@@ -69,8 +74,24 @@ struct CounterFeatureSideEffect: Reducer {
                 state.fact = nil
                 return .none
                 
-            case .toggleTimerButtonTapped:
+            case .timerTick:
+                state.count += 1
+                state.fact = nil
                 return .none
+                
+            case .toggleTimerButtonTapped:
+                state.isTimerRunning.toggle()
+                if state.isTimerRunning {
+                    return .run { send in
+                        while true {
+                            try await Task.sleep(for: .seconds(1))
+                            await send(.timerTick)
+                        }
+                    }
+                    .cancellable(id: CancelID.timer)
+                } else {
+                    return .cancel(id: CancelID.timer)
+                }
             }
         }
     }
