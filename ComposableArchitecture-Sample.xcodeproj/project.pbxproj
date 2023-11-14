@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		529D29F52B03008B003D18CD /* CounterFeatureSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D29F42B03008B003D18CD /* CounterFeatureSideEffect.swift */; };
+		529D29F72B030092003D18CD /* CounterFeatureSideEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D29F62B030092003D18CD /* CounterFeatureSideEffectView.swift */; };
 		52D370522B014E6600E611B0 /* ComposableArchitecture_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D370512B014E6600E611B0 /* ComposableArchitecture_SampleApp.swift */; };
-		52D370542B014E6600E611B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D370532B014E6600E611B0 /* ContentView.swift */; };
 		52D370562B014E6600E611B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D370552B014E6600E611B0 /* Assets.xcassets */; };
 		52D3705A2B014E6600E611B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D370592B014E6600E611B0 /* Preview Assets.xcassets */; };
 		52D370622B01515500E611B0 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 52D370612B01515500E611B0 /* ComposableArchitecture */; };
@@ -17,9 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		529D29F42B03008B003D18CD /* CounterFeatureSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureSideEffect.swift; sourceTree = "<group>"; };
+		529D29F62B030092003D18CD /* CounterFeatureSideEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureSideEffectView.swift; sourceTree = "<group>"; };
 		52D3704E2B014E6600E611B0 /* ComposableArchitecture-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ComposableArchitecture-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D370512B014E6600E611B0 /* ComposableArchitecture_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_SampleApp.swift; sourceTree = "<group>"; };
-		52D370532B014E6600E611B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52D370552B014E6600E611B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D370572B014E6600E611B0 /* ComposableArchitecture_Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ComposableArchitecture_Sample.entitlements; sourceTree = "<group>"; };
 		52D370592B014E6600E611B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -39,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		529D29F32B02F859003D18CD /* 02-Side_Effect-Outside_Communication */ = {
+			isa = PBXGroup;
+			children = (
+				529D29F42B03008B003D18CD /* CounterFeatureSideEffect.swift */,
+				529D29F62B030092003D18CD /* CounterFeatureSideEffectView.swift */,
+			);
+			path = "02-Side_Effect-Outside_Communication";
+			sourceTree = "<group>";
+		};
 		52D370452B014E6600E611B0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +69,9 @@
 		52D370502B014E6600E611B0 /* ComposableArchitecture-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				529D29F32B02F859003D18CD /* 02-Side_Effect-Outside_Communication */,
 				52D370652B0153D300E611B0 /* 01-First_Reducer */,
 				52D370512B014E6600E611B0 /* ComposableArchitecture_SampleApp.swift */,
-				52D370532B014E6600E611B0 /* ContentView.swift */,
 				52D370552B014E6600E611B0 /* Assets.xcassets */,
 				52D370572B014E6600E611B0 /* ComposableArchitecture_Sample.entitlements */,
 				52D370582B014E6600E611B0 /* Preview Content */,
@@ -162,9 +173,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D370642B0151AD00E611B0 /* CounterFeature.swift in Sources */,
-				52D370542B014E6600E611B0 /* ContentView.swift in Sources */,
 				52D370672B0153FF00E611B0 /* CounterFeatureView.swift in Sources */,
 				52D370522B014E6600E611B0 /* ComposableArchitecture_SampleApp.swift in Sources */,
+				529D29F72B030092003D18CD /* CounterFeatureSideEffectView.swift in Sources */,
+				529D29F52B03008B003D18CD /* CounterFeatureSideEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
