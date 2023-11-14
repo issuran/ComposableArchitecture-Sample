@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		529D29F42B03008B003D18CD /* CounterFeatureSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureSideEffect.swift; sourceTree = "<group>"; };
 		529D29F62B030092003D18CD /* CounterFeatureSideEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureSideEffectView.swift; sourceTree = "<group>"; };
+		529D29F82B030BDA003D18CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		52D3704E2B014E6600E611B0 /* ComposableArchitecture-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ComposableArchitecture-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D370512B014E6600E611B0 /* ComposableArchitecture_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchitecture_SampleApp.swift; sourceTree = "<group>"; };
 		52D370552B014E6600E611B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		52D370502B014E6600E611B0 /* ComposableArchitecture-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				529D29F82B030BDA003D18CD /* Info.plist */,
 				529D29F32B02F859003D18CD /* 02-Side_Effect-Outside_Communication */,
 				52D370652B0153D300E611B0 /* 01-First_Reducer */,
 				52D370512B014E6600E611B0 /* ComposableArchitecture_SampleApp.swift */,
@@ -305,6 +307,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ComposableArchitecture-Sample/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -343,6 +346,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ComposableArchitecture-Sample/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
